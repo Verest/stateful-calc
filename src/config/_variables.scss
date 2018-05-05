@@ -1,0 +1,40 @@
+/* COLOR PALLETS */
+//named colors
+$turquoise            : #3D8B99; //paradiso
+$silver               : #CCDCFF; //periwinkle
+$blue                 : #3D6ACC; //indigo
+$brown                : #A67E6C; //sandal
+$red                  : #CC553D; //mojo
+$gray                 : #3e3e3e;
+
+//purpose of colors
+$color-primary        : $turquoise;
+$color-secondary      : $blue;
+$color-tertiary       : $brown;
+$color-background     : lighten($silver,5%);
+$color-cta            : $red;
+
+//variants of colors
+$color-primary-darker : darken($turquoise, 25%);
+$color-primary-darkest: darken($turquoise, 30%);
+$blue-darker          : darken($blue, 20%);
+
+//grays
+$gray-lightest        : lighten($gray, 80%);
+$gray-lighter         : lighten($gray, 50%);
+$gray-dark            : darken($gray, 10%);
+
+/*BREAK POINTS*/
+$media-xs             : 550px;
+$media-s              : 551px;
+$media-m              : 768px;
+$media-l              : 1024px;
+$media-xl             : 1440px;
+
+$breakpoints:(
+  "xs": $media-xs,
+  "s": $media-s,
+  "m": $media-m,
+  "l": $media-l,
+  "xl": $media-xl,
+);

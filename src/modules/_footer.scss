@@ -1,0 +1,75 @@
+footer{
+  @extend %clearfix;
+  margin-top: 2em;
+  @include section-border(top);
+  background-color: $color-primary-darkest;
+  @include mq(s){
+    height: 12em;
+  }
+
+}
+.to-top{
+  @extend %center;
+  width: 100%;
+  height: 3em;
+  background-color: $color-primary-darker;
+  a{
+    display: block;
+    padding: .95em;
+    color: $silver;
+  }
+}
+
+.purpose,
+.contact{
+  color: $silver;
+  padding: 1em;
+  @extend %center;
+  margin-left: 5%;
+  margin-right: 5%;
+  @include mq(s){
+    width: 40%;
+    display: table;
+  }
+  @include mq(l){
+    width: 27.33%;
+  }
+}
+.purpose{
+  border: 1px solid $silver;
+  margin-top: 1em;
+
+  &__content{
+    display: table-cell;
+    vertical-align: middle;
+  }
+  @include mq(s){
+    float: left;
+    height: 7em;
+    margin-bottom: 1em;
+    margin-right: 10%;
+  }
+  @include mq(l){
+    margin: 1.5em 39.33% 1.5em 3%;
+    height: 6em;
+  }
+  @include mq(xl){
+    width: 21.33%;
+    margin: 1.5em 42.33% 1.5em 6%;
+  }
+}
+
+.contact{
+  @extend %center;
+  @include mq(s){
+    height: 9em;
+
+    &__content{
+      display: table-cell;
+      vertical-align: middle;
+    }
+    @include mq(l){
+      margin-right: 3.33%;
+    }
+  }
+}

@@ -1,0 +1,150 @@
+//LOGO
+#logo{
+  width: 2em;
+  height: 2em;
+  float: left;
+}
+//MOBILE FIXES
+//force ul down below
+.nav__row-one{
+  @extend %clearfix;
+  padding: 1em 0;
+
+  @include mq(s){
+    float: left;
+    width: 60%;
+  }
+}
+//TITLE TEXT
+.hidden{
+  display: none;
+}
+
+.title{
+  position: relative;
+  &__text{
+    margin: 0;
+    @include head-font;
+    font-size: 1.5em;
+    position: absolute;
+    color: $silver;
+    top: 0.125em;
+    left: 1.25em;
+  }
+}
+.home-link{
+  display: inline-block;
+  min-width: 12.9em;
+}
+
+//BG COLOR and hiding functionality for hamburger
+//note that this will currently break the nav is JS is disabled
+header{
+  background-color: $color-primary-darkest;
+  @include section-border(bottom);
+  transition: height 0.25s ease-out;
+  @include mq(xs){
+    height: 4.1875em;
+  }
+  @include mq(s){
+    height: 4.1875em;
+  }
+}
+
+.header-show{
+  @include mq(xs){
+    height: 11.5625em;
+  }
+}
+
+.nav__row-two{
+  transition: transform 0.25s ease-out, font-size .2s linear;
+  transform-origin: 0px 0px;
+  @extend %clearfix;
+
+  @include mq(xs){
+    background-color: $color-primary-darker;
+    font-size: 0;
+    transform: scaleY(.01);
+  }
+  @include mq(s){
+    float: right;
+    width: 40%;
+    // display: inline-block;
+    // vertical-align: middle;
+  }
+}
+
+.nav-show{
+  @include mq(xs){
+    transform: scaleY(1);
+    font-size: 1em;
+  }
+}
+
+//HAMBURGER
+#hamburger{
+  display: block;
+  position: relative;
+  height: 2em;
+  width: 2em;
+  float: right;
+  @include border-rad;
+  @include mq(s){
+    display: none;
+  }
+}
+.bar{ //doesn't actually exist
+  &-top{
+    @extend %bar;
+    top: 0.4em;
+  }
+  &-mid{
+    @extend %bar;
+    top: 0.9em;
+  }
+  &-bot{
+    @extend %bar;
+    top: 1.4em;
+  }
+}
+
+.transition-bar-top{
+  width: 2.26em;
+  top: 0.1em;
+  transform: rotate(45deg);
+}
+.transition-bar-mid{
+  opacity: 0;
+}
+.transition-bar-bot{
+  width: 2.26em;
+  top: 1.7em;
+  transform: rotate(-45deg);
+}
+
+//LIST
+.nav__list{
+  @extend %center;
+  list-style: none;
+  padding: 1em 0;
+  margin: 0;
+  // display: inline-block;
+  &__item{
+      display: block;
+      margin: 0.25em 0em;
+      border: 1px $silver solid;
+
+      @include mq(s){
+        margin: 0;
+        margin-left: 1em;
+        float: right;
+      }
+
+      a{
+        padding: 0.5em 0.5em;
+        color: $silver;
+        display: block;
+      }
+  }
+}

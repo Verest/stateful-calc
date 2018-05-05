@@ -1,0 +1,152 @@
+.container {
+  width: 100%;
+  line-height: 1.5625;
+  @extend %clearfix;
+
+}
+.intro-header{
+  margin-top:1.2em;
+}
+.intro-paragraph{
+  margin-bottom: 1.15em;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.calc-header{
+  text-align:center;
+}
+
+.history-nav{
+  width: 240px;
+  margin: 0 auto;
+  button{
+    color: $silver;
+    background-color: $turquoise;
+    padding: 0.3em 0.5em;
+    border-radius: 5%;
+    margin-bottom: 0.4em;
+    box-shadow: 1px 1px 2px $color-primary-darker;
+  }
+
+  button:nth-child(2){
+    float: right;
+  }
+}
+.text{
+  margin:0px;
+  margin-bottom:5px;
+}
+.calc-container {
+  position:relative;
+  padding: 20px 10px;
+  width: 240px;
+  @extend %blockCenter;
+  background: rgba($blue, 0.95);
+  border-radius:3%;
+  box-shadow: 2px 2px 3px $blue-darker;
+}
+.calc-container::after {
+  content:'';
+  position: absolute;
+  top:0;bottom:0;
+  left:0; right:0;
+  z-index: -1;
+  background-image: url("./img/calc-bg.jpg");
+  background-size: cover;
+  border-radius:3%;
+
+}
+
+.screen {
+  @extend %blockCenter;
+  width: 200px;
+  height: 110px;
+  background: rgba(#aaaaaa, 0.8);
+  text-align:left;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border: 0.5px solid #858585;
+  padding: 5px;
+}
+.screenLine{
+  font-size:12px;
+  margin-top:0px;
+  margin-bottom:0px;
+  height:15px;
+  overflow:hidden;
+  height: 16.66%;
+}
+
+.buttons{
+  display:table;
+  min-width:200px;
+  margin-bottom: 1em;
+  @extend %blockCenter;
+
+  button{
+    box-shadow: 1px 1px 3px $gray;
+  }
+}
+#numButtons,
+#opButtons {
+  display:table-cell;
+}
+
+#opButtons {
+text-align:right;
+}
+
+#numButtons {
+text-align:left;
+}
+.stdButton {
+  width: 30px;
+  height: 25px;
+  margin: 4px;
+}
+
+.wideButton {
+  width: 68px;
+  height: 25px;
+  margin: 4px;
+}
+.LHS{
+  margin-left:0px;
+}
+.RHS{
+  margin-right:0px;
+}
+
+.align-right{
+  text-align: right;
+}
+
+.align-left{
+  text-align: left;
+}
+
+@include mq(m){
+  .intro-wrapper{
+    height: 435px;
+  }
+  .intro-paragraph{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+  }
+  .intro-wrapper,
+  .calc-n-history{
+    width: 45%;
+    margin-left:2.5%; margin-right: 2.5%;
+    float: left;
+  }
+  .calc-n-history{
+    margin-top: 2.3em;
+  }
+  .container{
+    max-width: 1000px;
+    margin-left: auto; margin-right: auto;
+  }
+}

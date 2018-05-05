@@ -1,0 +1,52 @@
+//screen reader, should be moved somewhere else
+.srt{
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+*{
+  box-sizing: border-box;
+  @include main-font;//temp
+}
+html{
+  font-size: 16px;
+}
+
+button{
+  border: none;
+  background-color: $silver;
+}
+
+body{
+  background-color: $color-background;
+  width: 100%;
+  color: $gray-dark;
+}
+
+
+main,
+footer,
+section{
+  width: 100%;
+}
+
+h2{
+  @extend %center;
+  @include section-border(bottom);
+}
+
+a{
+  text-decoration: none;
+  color: $color-secondary;
+}
+
+.stickyFooter{
+  min-height: calc(100vh - 14em);
+}

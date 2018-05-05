@@ -1,0 +1,46 @@
+//No partials for this atm
+
+.wrapper{
+  width: 90%;
+  margin: 0px auto;
+  @include mq(l){
+    width: 85%;
+  }
+  @include mq(xl){
+    width: 80%;
+    max-width: 1440px;
+  }
+
+  //sort of error prone if the header percents ever updated...
+  //make a function for this at some point
+  &-row-one{
+    @extend .wrapper;
+    @include mq(s){
+      width: 91.667%;
+      margin-left: 8.333%;
+    }
+    @include mq(l){
+      width: 87.5%;
+      margin-left: 12.5%;
+    }
+    @include mq(xl){
+      width: 83.333%;
+      margin-left: 16.667%;
+    }
+  }
+  &-row-two{
+    @extend .wrapper;
+    @include mq(s){
+      width: 87.5%;
+      margin-right: 12.5%;
+    }
+    @include mq(l){
+      width: 81.25%;
+      margin-right: 18.75%;
+    }
+    @include mq(xl){
+      width: 75%;
+      margin-right: 25%;
+    }
+  }
+}
